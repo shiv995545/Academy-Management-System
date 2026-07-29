@@ -14,14 +14,13 @@ import {
 } from 'lucide-react'
 import { PublicNavbar } from '../../components/Navbar'
 import { PublicFAQ, PublicFooter } from '../../components/PublicExtras/PublicExtras'
+import { API_BASE_URL as API_BASE } from '../../config/api'
 import {
   COURSE_CATEGORIES,
   getCourseCategory,
   getCourseImage
 } from './courseCatalog'
 import './Courses.css'
-
-const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000/api/v1'
 
 const priceFilters = [
   { value: 'all', label: 'All Courses' },

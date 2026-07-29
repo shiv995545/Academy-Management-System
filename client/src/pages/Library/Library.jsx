@@ -22,9 +22,8 @@ import {
 } from 'lucide-react'
 import { PublicNavbar } from '../../components/Navbar'
 import { PublicFAQ, PublicFooter } from '../../components/PublicExtras/PublicExtras'
+import { API_BASE_URL as API_BASE } from '../../config/api'
 import './Library.css'
-
-const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000/api/v1'
 
 const fallbackClasses = Array.from({ length: 10 }, (_, index) => {
   const classNumber = index + 1
