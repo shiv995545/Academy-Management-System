@@ -2,7 +2,7 @@ const corsConfig = require('../config/cors')
 
 function corsMiddleware(req, res, next) {
   const requestOrigin = req.headers.origin
-  const allowedOrigin = corsConfig.origins.includes(requestOrigin)
+  const allowedOrigin = requestOrigin && corsConfig.origins.includes(requestOrigin)
     ? requestOrigin
     : corsConfig.origins[0]
 

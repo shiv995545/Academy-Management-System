@@ -10,7 +10,7 @@ services:
       - key: NODE_ENV
         value: production
       - key: CLIENT_ORIGIN
-        value: https://dist-gray-kappa-26.vercel.app,https://dist-q3jf91a7a-shiv-eff1.vercel.app
+        value: https://dist-gray-kappa-26.vercel.app,https://dist-q3jf91a7a-shiv-eff1.vercel.app,https://dist-3v8c3d22e-shiv-eff1.vercel.app
       - key: JWT_SECRET
         generateValue: true
       - key: ADMIN_EMAIL

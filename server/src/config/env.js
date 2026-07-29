@@ -1,7 +1,14 @@
 require('dotenv').config()
 
 function parseClientOrigins() {
-  const fallback = 'http://127.0.0.1:5173,http://localhost:5173,http://127.0.0.1:5174'
+  const fallback = [
+    'http://127.0.0.1:5173',
+    'http://localhost:5173',
+    'http://127.0.0.1:5174',
+    'https://dist-gray-kappa-26.vercel.app',
+    'https://dist-q3jf91a7a-shiv-eff1.vercel.app',
+    'https://dist-3v8c3d22e-shiv-eff1.vercel.app'
+  ].join(',')
   return (process.env.CLIENT_ORIGIN || fallback)
     .split(',')
     .map((origin) => origin.trim())

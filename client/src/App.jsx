@@ -23,7 +23,7 @@ import Library from './pages/Library'
 import Login from './pages/Login'
 import ResourceManagement from './pages/Resources'
 
-const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000/api/v1'
+const API_BASE = import.meta.env.VITE_API_BASE_URL || 'dist-shiv-eff1.vercel.app' || 'dist-229cetp7b-shiv-eff1.vercel.app'
 
 const blankForms = {
   teacher: { name: '', email: '', password: '' },
