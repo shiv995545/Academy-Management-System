@@ -1,0 +1,26 @@
+require('dotenv').config()
+
+function parseClientOrigins() {
+  const fallback = 'http://127.0.0.1:5173,http://localhost:5173,http://127.0.0.1:5174'
+  return (process.env.CLIENT_ORIGIN || fallback)
+    .split(',')
+    .map((origin) => origin.trim())
+    .filter(Boolean)
+}
+
+module.exports = {
+  port: process.env.PORT || 3000,
+  nodeEnv: process.env.NODE_ENV || 'development',
+  clientOrigins: parseClientOrigins(),
+  jwtSecret: process.env.JWT_SECRET || 'change-this-secret-in-production',
+  adminEmail: process.env.ADMIN_EMAIL || 'admin@coaching.local',
+  adminPassword: process.env.ADMIN_PASSWORD || 'admin123',
+  databaseUrl: process.env.DATABASE_URL,
+  database: {
+    user: process.env.DB_USER || 'shivamgupta',
+    host: process.env.DB_HOST || 'localhost',
+    database: process.env.DB_NAME || 'demopost',
+    password: process.env.DB_PASSWORD || '1234',
+    port: Number(process.env.DB_PORT || 5432)
+  }
+}

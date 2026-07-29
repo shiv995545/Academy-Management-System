@@ -1,0 +1,154 @@
+.public-faq {
+  padding: 72px 48px;
+  background: #f8fafc;
+}
+
+.public-section-heading {
+  max-width: 820px;
+  margin: 0 auto 34px;
+  text-align: center;
+}
+
+.public-section-heading p {
+  margin: 0 0 8px;
+  color: #315cf5;
+  font-weight: 820;
+}
+
+.public-section-heading h2 {
+  margin: 0;
+  color: #111827;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  line-height: 1.18;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.faq-grid article {
+  min-height: 170px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+  padding: 22px;
+}
+
+.faq-grid h3 {
+  margin: 0 0 12px;
+  color: #111827;
+  font-size: 1.05rem;
+  line-height: 1.28;
+}
+
+.faq-grid p {
+  margin: 0;
+  color: #475569;
+  line-height: 1.55;
+}
+
+.public-footer {
+  display: grid;
+  grid-template-columns: minmax(260px, 1fr) auto minmax(260px, 1fr);
+  gap: 28px;
+  align-items: center;
+  padding: 34px 48px;
+  color: #e5e7eb;
+  background: #111827;
+}
+
+.footer-brand,
+.footer-contact span {
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-brand {
+  gap: 12px;
+}
+
+.footer-brand svg {
+  color: #60a5fa;
+}
+
+.footer-brand strong,
+.footer-brand span {
+  display: block;
+}
+
+.footer-brand strong {
+  color: #ffffff;
+  font-size: 1.05rem;
+}
+
+.footer-brand span {
+  color: #cbd5e1;
+  margin-top: 4px;
+}
+
+.public-footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+}
+
+.public-footer nav button {
+  color: #e5e7eb;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  font-weight: 760;
+}
+
+.footer-contact {
+  display: grid;
+  justify-content: end;
+  gap: 8px;
+}
+
+.footer-contact span {
+  justify-content: flex-end;
+  gap: 8px;
+  color: #cbd5e1;
+}
+
+@media (max-width: 1100px) {
+  .faq-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .public-footer {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .public-footer nav {
+    justify-content: flex-start;
+  }
+
+  .footer-contact {
+    justify-content: start;
+  }
+
+  .footer-contact span {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .public-faq {
+    padding: 52px 18px;
+  }
+
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .public-footer {
+    padding: 30px 20px;
+  }
+}

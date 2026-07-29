@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" role="img" aria-labelledby="title desc">
+  <title id="title">Science coaching classroom</title>
+  <desc id="desc">Students learning science with a teacher at a whiteboard.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#1d4ed8"/>
+      <stop offset="1" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="desk" x1="0" x2="1">
+      <stop offset="0" stop-color="#dbeafe"/>
+      <stop offset="1" stop-color="#93c5fd"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="700" fill="url(#bg)"/>
+  <circle cx="1260" cy="112" r="210" fill="#60a5fa" opacity=".18"/>
+  <circle cx="240" cy="560" r="260" fill="#22d3ee" opacity=".13"/>
+  <rect x="150" y="92" width="720" height="392" rx="28" fill="#f8fafc"/>
+  <rect x="188" y="132" width="644" height="312" rx="18" fill="#e0f2fe"/>
+  <path d="M260 372c86-112 146-112 230 0 74-86 128-86 205 0" fill="none" stroke="#2563eb" stroke-width="22" stroke-linecap="round"/>
+  <circle cx="304" cy="238" r="42" fill="#facc15"/>
+  <path d="M610 178h132M610 232h92M610 286h150" stroke="#1e3a8a" stroke-width="18" stroke-linecap="round"/>
+  <rect x="1010" y="236" width="260" height="332" rx="34" fill="#f8fafc"/>
+  <circle cx="1140" cy="178" r="74" fill="#fde68a"/>
+  <path d="M1140 254v178M1060 326h160" stroke="#1f2937" stroke-width="24" stroke-linecap="round"/>
+  <rect x="910" y="504" width="560" height="92" rx="18" fill="url(#desk)"/>
+  <circle cx="1008" cy="438" r="54" fill="#fca5a5"/>
+  <path d="M930 568c8-80 150-80 158 0" fill="#2563eb"/>
+  <circle cx="1348" cy="438" r="54" fill="#fdba74"/>
+  <path d="M1270 568c8-80 150-80 158 0" fill="#16a34a"/>
+  <path d="M72 628h1460" stroke="#bfdbfe" stroke-width="18" stroke-linecap="round" opacity=".45"/>
+</svg>

@@ -1,0 +1,295 @@
+/* Public ERP Academy auth page */
+.login-page.auth-page {
+  min-height: 100vh;
+  display: block;
+  padding: 0;
+  background: #f8fafc;
+}
+
+.login-page .auth-content {
+  width: min(620px, calc(100% - 32px));
+  margin: 72px auto 64px;
+}
+
+.login-page .auth-content.compact-auth {
+  margin-top: 140px;
+}
+
+.login-page .auth-page-header {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.login-page .auth-page-header h1 {
+  margin: 0;
+  color: #111827;
+  font-size: 2rem;
+  line-height: 1.15;
+  letter-spacing: 0;
+}
+
+.login-page .auth-page-header p {
+  margin: 8px 0 0;
+  color: #64748b;
+  font-size: 0.98rem;
+  font-weight: 700;
+}
+
+.login-page .login-panel {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.06);
+  padding: 26px 42px 28px;
+}
+
+.login-page .role-title {
+  margin: 0 0 16px;
+  color: #111827;
+  text-align: center;
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.login-page .role-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.login-page .role-card {
+  min-height: 120px;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  gap: 9px;
+  color: #64748b;
+  background: #ffffff;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 18px 14px;
+  text-align: center;
+}
+
+.login-page .role-card svg {
+  color: #9ca3af;
+}
+
+.login-page .role-card strong {
+  color: #111827;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.login-page .role-card span {
+  max-width: 150px;
+  color: #64748b;
+  font-size: 0.78rem;
+  line-height: 1.35;
+  font-weight: 750;
+}
+
+.login-page .role-card.selected {
+  color: #3563ff;
+  background: #eff6ff;
+  border-color: #3563ff;
+}
+
+.login-page .role-card.selected svg,
+.login-page .role-card.selected strong {
+  color: #3563ff;
+}
+
+.login-page .auth-divider {
+  height: 4px;
+  margin: 20px 0 24px;
+  background: #3563ff;
+}
+
+.login-page .login-form-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 0 0 22px;
+  color: #111827;
+  font-size: 1.22rem;
+  line-height: 1.2;
+}
+
+.login-page .login-form-title svg {
+  color: #3563ff;
+}
+
+.login-page .auth-field {
+  gap: 8px;
+  margin-bottom: 18px;
+  color: #475569;
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+.login-page .auth-field > span:first-child {
+  display: block;
+}
+
+.login-page .auth-field input,
+.login-page .auth-field .input-with-action {
+  min-height: 44px;
+}
+
+.login-page .auth-field input {
+  min-height: 44px;
+  color: #111827;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 10px 13px;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.login-page .auth-field input::placeholder {
+  color: #9ca3af;
+}
+
+.login-page .auth-field .input-with-action {
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr) 42px;
+  align-items: center;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.login-page .auth-field .input-with-action input {
+  border: 0;
+  border-radius: 0;
+  padding-left: 0;
+}
+
+.login-page .auth-field .input-with-action input:focus {
+  box-shadow: none;
+}
+
+.login-page .input-leading-icon {
+  display: grid;
+  place-items: center;
+  color: #9ca3af;
+}
+
+.login-page .auth-field .input-with-action button {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  color: #9ca3af;
+  background: #ffffff;
+  border: 0;
+}
+
+.login-page .auth-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 2px 0 20px;
+}
+
+.login-page .remember-check {
+  display: inline-flex;
+  grid-auto-flow: column;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  color: #475569;
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+.login-page .remember-check input {
+  width: 14px;
+  min-height: 14px;
+  accent-color: #111827;
+}
+
+.login-page .inline-link,
+.login-page .enroll-line button,
+.login-page .support-card a {
+  color: #3563ff;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  font-size: 0.86rem;
+  font-weight: 850;
+  text-decoration: none;
+}
+
+.login-page .login-panel .primary-action {
+  min-height: 50px;
+  color: #ffffff;
+  background: #3563ff;
+  border-radius: 8px;
+  font-size: 0.98rem;
+  font-weight: 850;
+}
+
+.login-page .login-panel .primary-action:hover {
+  background: #244ee8;
+}
+
+.login-page .enroll-line {
+  margin: 22px 0 0;
+  color: #64748b;
+  text-align: center;
+  font-size: 0.94rem;
+  font-weight: 750;
+}
+
+.login-page .support-card {
+  margin-top: 22px;
+  padding: 24px;
+  background: #eff6ff;
+  border-radius: 8px;
+}
+
+.login-page .support-card h2 {
+  margin: 0;
+  color: #111827;
+  font-size: 1.05rem;
+}
+
+.login-page .support-card p {
+  margin: 12px 0 16px;
+  color: #64748b;
+  font-size: 0.9rem;
+  font-weight: 650;
+}
+
+.login-page .password-rules {
+  margin-top: -8px;
+}
+
+@media (max-width: 900px) {
+  .login-page .auth-content {
+    margin-top: 58px;
+  }
+}
+
+@media (max-width: 640px) {
+  .login-page .auth-content {
+    width: min(100% - 24px, 620px);
+    margin-top: 34px;
+  }
+
+  .login-page .login-panel {
+    padding: 22px;
+  }
+
+  .login-page .role-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .login-page .auth-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

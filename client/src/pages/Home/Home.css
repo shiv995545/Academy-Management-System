@@ -1,0 +1,394 @@
+.home-page {
+  min-height: 100vh;
+  color: #111827;
+  background: #ffffff;
+}
+
+.home-hero {
+  position: relative;
+  width: 100%;
+  height: 430px;
+  overflow: hidden;
+  background: #111827;
+}
+
+.home-hero img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center bottom;
+  opacity: 0;
+  transition: opacity 460ms ease;
+}
+
+.home-hero img.active {
+  opacity: 1;
+}
+
+.home-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(17, 24, 39, 0.36);
+}
+
+.hero-arrow {
+  position: absolute;
+  top: 50%;
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  color: #111827;
+  background: rgba(255, 255, 255, 0.82);
+  border: 0;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.hero-arrow-left {
+  left: 22px;
+}
+
+.hero-arrow-right {
+  right: 22px;
+}
+
+.hero-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 22px;
+  display: flex;
+  gap: 14px;
+  transform: translateX(-50%);
+}
+
+.hero-dots button {
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.58);
+  border: 0;
+  border-radius: 50%;
+  padding: 0;
+}
+
+.hero-dots button.active {
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.22);
+}
+
+.home-cta {
+  min-height: 200px;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 28px;
+  padding: 45px 104px;
+  color: #ffffff;
+  text-align: center;
+  background: linear-gradient(130deg, #315cf5 0%, #283dae 100%);
+}
+
+.home-cta h1 {
+  margin: 0;
+  max-width: 1380px;
+  font-size: clamp(2.8rem, 3vw, 5.4rem);
+  line-height: 1.08;
+  font-weight: 760;
+  letter-spacing: 0;
+}
+
+.home-cta p {
+  margin: 0;
+  max-width: 1050px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: clamp(1.25rem, 2vw, 1.05rem);
+  font-weight: 650;
+}
+
+.home-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 22px;
+}
+
+.home-cta-actions button,
+.home-course-card button {
+  min-height: 40px;
+  min-width: 100px;
+  color: #315cf5;
+  background: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  padding: 0 34px;
+  font-size: 1.1rem;
+  font-weight: 850;
+}
+
+.home-cta-actions button.outline {
+  color: #ffffff;
+  background: transparent;
+}
+
+.home-section {
+  padding: 86px 56px;
+}
+
+.why-section {
+  background: #f8fafc;
+}
+
+.home-section h2 {
+  margin: 0 0 72px;
+  color: #111827;
+  text-align: center;
+  font-size: clamp(2rem, 3vw, 3rem);
+  line-height: 1.15;
+  letter-spacing: 0;
+}
+
+.reason-grid,
+.course-grid,
+.story-grid {
+  width: 100%;
+  display: grid;
+  gap: 42px;
+}
+
+.reason-grid,
+.course-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.reason-card,
+.home-course-card,
+.story-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+}
+
+.reason-card {
+  min-height: 300px;
+  padding: 42px 36px;
+}
+
+.reason-card svg {
+  color: #315cf5;
+  margin-bottom: 30px;
+  stroke-width: 2.2;
+}
+
+.reason-card h3,
+.home-course-card h3 {
+  margin: 0 0 20px;
+  color: #111827;
+  font-size: 1.55rem;
+  line-height: 1.2;
+}
+
+.reason-card p,
+.home-course-card p {
+  margin: 0;
+  color: #4b5563;
+  font-size: 1.22rem;
+  line-height: 1.5;
+  font-weight: 560;
+}
+
+.course-section {
+  background: #ffffff;
+}
+
+.course-loading {
+  margin: -46px 0 38px;
+  color: #64748b;
+  text-align: center;
+  font-weight: 700;
+}
+
+.home-course-card {
+  min-height: 340px;
+  display: grid;
+  grid-template-rows: auto auto auto 1fr auto;
+  align-content: stretch;
+  padding: 40px 36px 36px;
+}
+
+.home-course-card p {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.home-course-card .course-description {
+  display: block;
+  margin: 8px 0 28px;
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.home-course-card button {
+  width: 100%;
+  align-self: end;
+  color: #ffffff;
+  background: #315cf5;
+  border-color: #315cf5;
+}
+
+.upcoming-section {
+  background: #f8fafc;
+}
+
+.batch-section {
+  background: #ffffff;
+}
+
+.upcoming-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.upcoming-card {
+  min-height: 240px;
+  display: grid;
+  align-content: start;
+  gap: 14px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+  padding: 30px;
+}
+
+.upcoming-card span {
+  width: fit-content;
+  color: #315cf5;
+  background: #eef4ff;
+  border-radius: 8px;
+  padding: 7px 10px;
+  font-weight: 820;
+}
+
+.upcoming-card h3 {
+  margin: 0;
+  color: #111827;
+  font-size: 1.35rem;
+  line-height: 1.2;
+}
+
+.upcoming-card p {
+  margin: 0;
+  color: #4b5563;
+  line-height: 1.55;
+}
+
+.upcoming-card small {
+  color: #64748b;
+  font-weight: 760;
+}
+
+.stories-section {
+  background: #f8fafc;
+}
+
+.story-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.story-card {
+  min-height: 330px;
+  padding: 44px 40px;
+}
+
+.story-stars {
+  display: flex;
+  gap: 12px;
+  color: #eab308;
+  margin-bottom: 28px;
+}
+
+.story-card blockquote {
+  margin: 0 0 30px;
+  color: #4b5563;
+  font-size: 1.24rem;
+  font-style: italic;
+  line-height: 1.55;
+  font-weight: 560;
+}
+
+.story-card strong,
+.story-card span {
+  display: block;
+}
+
+.story-card strong {
+  color: #111827;
+  font-size: 1.16rem;
+  margin-bottom: 6px;
+}
+
+.story-card span {
+  color: #6b7280;
+  font-size: 1.04rem;
+  font-weight: 680;
+}
+
+@media (max-width: 1100px) {
+  .reason-grid,
+  .course-grid,
+  .story-grid,
+  .upcoming-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-hero {
+    height: 360px;
+  }
+}
+
+@media (max-width: 700px) {
+  .home-hero {
+    height: 280px;
+  }
+
+  .hero-arrow {
+    width: 46px;
+    height: 46px;
+  }
+
+  .home-cta {
+    min-height: 420px;
+  }
+
+  .home-section {
+    padding: 58px 18px;
+  }
+
+  .home-section h2 {
+    margin-bottom: 32px;
+  }
+
+  .reason-grid,
+  .course-grid,
+  .story-grid,
+  .upcoming-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .reason-card,
+  .home-course-card,
+  .story-card,
+  .upcoming-card {
+    min-height: auto;
+    padding: 28px 24px;
+  }
+}

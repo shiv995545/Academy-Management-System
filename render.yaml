@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: academy-management-api
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: CLIENT_ORIGIN
+        value: https://dist-gray-kappa-26.vercel.app,https://dist-q3jf91a7a-shiv-eff1.vercel.app
+      - key: JWT_SECRET
+        generateValue: true
+      - key: ADMIN_EMAIL
+        value: admin@coaching.local
+      - key: ADMIN_PASSWORD
+        generateValue: true
+      - key: DATABASE_URL
+        sync: false
