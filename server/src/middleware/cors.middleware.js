@@ -1,8 +1,16 @@
 const corsConfig = require('../config/cors')
 
+function isOriginAllowed(origin) {
+  if (!origin) return false
+  if (corsConfig.origins.includes(origin)) return true
+  // Allow all Vercel deployment origins (production & preview links)
+  if (/^https:\/\/[a-zA-Z0-9-]+\.vercel\.app$/.test(origin)) return true
+  return false
+}
+
 function corsMiddleware(req, res, next) {
   const requestOrigin = req.headers.origin
-  const allowedOrigin = requestOrigin && corsConfig.origins.includes(requestOrigin)
+  const allowedOrigin = isOriginAllowed(requestOrigin)
     ? requestOrigin
     : corsConfig.origins[0]
 
