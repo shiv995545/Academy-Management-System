@@ -24,6 +24,7 @@ app.use('/uploads', express.static('server/uploads'))
 
 app.get('/', authController.getApiInfo)
 
+api.get('/', authController.getApiInfo)
 api.use('/auth', authRoutes)
 api.use('/contact', contactRoutes)
 api.use('/class-levels', classLevelRoutes)
