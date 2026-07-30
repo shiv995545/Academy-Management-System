@@ -36,3 +36,5 @@ node_modules/.vite/
 
 # Coverage
 coverage/
+.vercel
+.env*

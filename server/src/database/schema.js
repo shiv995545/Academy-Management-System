@@ -233,15 +233,27 @@ async function createTables() {
 }
 
 async function seedAdmin() {
-  const existingAdmin = await db.query('SELECT id FROM users WHERE role = $1 LIMIT 1', ['admin'])
-  if (existingAdmin.rows.length > 0) return
+  const adminEmail = env.adminEmail || 'admin@coaching.local'
+  const adminPassword = env.adminPassword || 'admin123'
+  const passwordHash = hashPassword(adminPassword)
 
-  await db.query(
-    'INSERT INTO users (name, email, password_hash, role) VALUES ($1, $2, $3, $4)',
-    ['Admin', env.adminEmail, hashPassword(env.adminPassword), 'admin']
-  )
+  const existingAdmin = await db.query('SELECT id FROM users WHERE email = $1 OR role = $2 LIMIT 1', [adminEmail, 'admin'])
 
-  console.log(`Default admin created: ${env.adminEmail} / ${env.adminPassword}`)
+  if (existingAdmin.rows.length > 0) {
+    await db.query('UPDATE users SET email = $1, password_hash = $2, role = $3, is_active = true WHERE id = $4', [
+      adminEmail,
+      passwordHash,
+      'admin',
+      existingAdmin.rows[0].id
+    ])
+    console.log(`Admin account synced: ${adminEmail} / ${adminPassword}`)
+  } else {
+    await db.query(
+      'INSERT INTO users (name, email, password_hash, role, is_active) VALUES ($1, $2, $3, $4, true)',
+      ['Admin', adminEmail, passwordHash, 'admin']
+    )
+    console.log(`Default admin created: ${adminEmail} / ${adminPassword}`)
+  }
 }
 
 module.exports = {
