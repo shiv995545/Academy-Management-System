@@ -2,13 +2,25 @@ const defaultProductionApiBaseUrl = 'https://academy-management-system-czfq.onre
 const localApiBaseUrl = 'http://localhost:3000/api/v1'
 
 function getApiBaseUrl() {
-  if (import.meta.env.VITE_API_BASE_URL) {
-    return import.meta.env.VITE_API_BASE_URL
+  let url = import.meta.env.VITE_API_BASE_URL
+
+  if (!url && typeof window !== 'undefined' && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+    url = defaultProductionApiBaseUrl
   }
-  if (typeof window !== 'undefined' && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
-    return defaultProductionApiBaseUrl
+
+  if (!url) {
+    url = localApiBaseUrl
   }
-  return localApiBaseUrl
+
+  // Remove trailing slashes
+  url = url.replace(/\/+$/, '')
+
+  // Ensure /api/v1 suffix is attached
+  if (!url.endsWith('/api/v1')) {
+    url = `${url}/api/v1`
+  }
+
+  return url
 }
 
 export const API_BASE_URL = getApiBaseUrl()
