@@ -4,12 +4,9 @@ const localApiBaseUrl = 'http://localhost:3000/api/v1'
 function getApiBaseUrl() {
   let url = import.meta.env.VITE_API_BASE_URL
 
-  if (!url && typeof window !== 'undefined' && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
-    url = defaultProductionApiBaseUrl
-  }
-
   if (!url) {
-    url = localApiBaseUrl
+    const isProduction = import.meta.env.PROD || import.meta.env.MODE === 'production'
+    url = isProduction ? defaultProductionApiBaseUrl : localApiBaseUrl
   }
 
   // Remove trailing slashes
